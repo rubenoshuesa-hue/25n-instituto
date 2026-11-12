@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="vieport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El padre</title>
+<style>
+    :root { color-scheme: dark; box-sizing: border-box; padding-top; env -inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+html, body { height: 100%; margin: 0; background: #000; }
+body { display: flex; justify-content: center; align-items: center; overflow: hidden; }
+svg { height: min(96vh, 1100px); max-width: 100vw; aspect-ratio: 1080 / 1414; display: block; }
+svg * { transform-box: view-box; }
+
+/* respiración y balanceo de todo el cuerpo */
+#fig { transform-origin: 540px 1390px; animation: respirar 5.5s ease-in-out infinite alternate, vaiven 9s ease-in-out infinite alternate; }
+@keyframes respirar { from { transform: translateY(0) scale(1, 1); } to { transform: translateY(-5px) scale(1.002, 1.006); } }
+@keyframes vaiven { from { rotate: -.3deg; } to { rotate: .3deg; } }
+
+/* pestañeo lento y pesado: ojos abiertos se ocultan y aparecen los cerrados */
+#abiertos { animation: abrir 6.5s infinite; }
+#cerrados { animation: cerrar 6.5s infinite; opacity: 0; }
+@keyframes abrir  { 0%, 91%, 96.5%, 100% { opacity: 1; } 92.5%, 95% { opacity: 0; } }
+@keyframes cerrar { 0%, 91%, 96.5%, 100% { opacity: 0; } 92.5%, 95% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { #fig, #abiertos, #cerrados { animation: none; } #cerrados { opacity: 0; } }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 1080 1414" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Retrato de un hombre cansado con barba y un cigarrillo, en blanco sobre negro"> 
+    <defs>
+        <filter id="lapiz" x="-2%" y="-2%" width="104%" height="104%">
+         <feTurbulence type="fractalNoise" baseFrequency="0.0125" num0ctaves="2" seed="1" result="n">
+            
+         </feTurbulence>   
+        </filter>
+    </head>
+</html>
